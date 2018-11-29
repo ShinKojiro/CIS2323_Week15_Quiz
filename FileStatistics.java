@@ -4,10 +4,10 @@ import java.io.*;
 
 public class FileStatistics {
 	public static void main (String[] args) {
-		Path filePath = Paths.get("C:\\Users\\svc_OKC_BT228\\Documents\\Projects\\CIS2323_Week15_Quiz\\someFile.txt");
-		int count = filePath.getNameCount();
+		Path filePath = Paths.get("someFile.txt");
+		
 		System.out.println("File name is: " + filePath.getFileName());
-		System.out.println("It is located in: " + filePath.toString());
+		System.out.println("It is located in: " + filePath.toAbsolutePath());
 		
 		try{
 			BasicFileAttributes attr = Files.readAttributes(filePath, BasicFileAttributes.class);
